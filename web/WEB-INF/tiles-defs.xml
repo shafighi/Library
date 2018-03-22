@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+ <!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+
+<!--
+     This is a blank Tiles definition file with a commented example.
+-->
+
+<tiles-definitions>
+<!--    main ha-->
+        <definition name="Tiles.Guest.Main" page="/Layout.jsp" >
+        <put name="Title" value="OurLibrary/main" />
+        <put name="Header"  value="/Header.jsp" />
+        <put name="LeftMenu" value="/Menu.jsp"/>
+        <put name="RightUp"   value="/InfoLinks.jsp" />
+        <put name="RightDown"   value="/LoginTable.jsp" />
+        <put name="Content" value="/Content.jsp"/>
+    </definition>
+    
+    <definition name="Tiles.Member.Main" page="/Layout.jsp" >
+        <put name="Title" value="YourLibrary/Main" />
+        <put name="Header"  value="/Header.jsp" />
+        <put name="LeftMenu" value="/Menu.jsp" />
+        <put name="RightUp"   value="/InfoLinks.jsp" />
+        <put name="RightDown"   value="/MemberRightDown.jsp" />
+        <put name="Content" value="/Content.jsp"/>
+    </definition>
+    
+        <definition name="Tiles.Admin.Main" page="/Layout.jsp" >
+        <put name="Title" value="YourLibrary/Main" />
+        <put name="Header"  value="/Header.jsp" />
+        <put name="LeftMenu" value="/Menu.jsp" />
+        <put name="RightUp"   value="/InfoLinks.jsp" />
+        <put name="RightDown"   value="/RightDown.jsp" />
+        <put name="Content" value="/Content.jsp"/>
+    </definition>
+    
+<!--First Menu  ha -->
+    <definition name="Tiles.Guest.FirstMenu" page="/Layout.jsp" >
+        <put name="Title" value="OurLibrary/main" />
+        <put name="Header"  value="/Header.jsp" />
+        <put name="LeftMenu" value="/CategoryTable.jsp"/>
+        <put name="RightUp"   value="/InfoLinks.jsp" />
+        <put name="RightDown"   value="/LoginTable.jsp" />
+        <put name="Content" value="/AddRemove.jsp"/>
+    </definition>
+    
+    <definition name="Tiles.Member.FirstMenu" page="/Layout.jsp" >
+        <put name="Title" value="YourLibrary/Main" />
+        <put name="Header"  value="/Header.jsp" />
+        <put name="LeftMenu" value="/CategoryTable.jsp" />
+        <put name="RightUp"   value="/InfoLinks.jsp" />
+        <put name="RightDown"   value="/RightDown.jsp" />
+        <put name="Content" value="/AddRemove.jsp"/>
+    </definition>
+    
+        <definition name="Tiles.Admin.FirstMenu" page="/Layout.jsp" >
+        <put name="Title" value="YourLibrary/Main" />
+        <put name="Header"  value="/Header.jsp" />
+        <put name="LeftMenu" value="/CategoryTable.jsp" />
+        <put name="RightUp"   value="/InfoLinks.jsp" />
+        <put name="RightDown"   value="/RightDown.jsp" />
+        <put name="Content" value="/AddRemove.jsp"/>
+    </definition>
+    
+<!--submenu ha -->    
+      <definition name="Tiles.Guest.SubMenu" page="/Layout.jsp" >
+        <put name="Title" value="OurLibrary/main" />
+        <put name="Header"  value="/Header.jsp" />
+        <put name="LeftMenu" value="/CategoryTable.jsp"/>
+        <put name="RightUp"   value="/InfoLinks.jsp" />
+        <put name="RightDown"   value="/LoginTable.jsp" />
+        <put name="Content" value="/SubMenu.jsp"/>
+    </definition>
+        <definition name="Tiles.Guest.SubMenu2" page="/Layout.jsp" >
+        <put name="Title" value="OurLibrary/main" />
+        <put name="Header"  value="/Header.jsp" />
+        <put name="LeftMenu" value="/CategoryTable.jsp"/>
+        <put name="RightUp"   value="/InfoLinks.jsp" />
+        <put name="RightDown"   value="/LoginTable.jsp" />
+        <put name="Content" value="/SubMenu.jsp"/>
+    </definition>
+   <definition name="Tiles.Guest.SubMenu3" page="/Layout.jsp" >
+        <put name="Title" value="OurLibrary/main" />
+        <put name="Header"  value="/Header.jsp" />
+        <put name="LeftMenu" value="/CategoryTable.jsp"/>
+        <put name="RightUp"   value="/InfoLinks.jsp" />
+        <put name="RightDown"   value="/LoginTable.jsp" />
+        <put name="Content" value="/SubMenu.jsp"/>
+    </definition>
+        <definition name="Tiles.Admin.SubMenu" page="/Layout.jsp" >
+        <put name="Title" value="OurLibrary/main" />
+        <put name="Header"  value="/Header.jsp" />
+        <put name="LeftMenu" value="/CategoryTable.jsp"/>
+        <put name="RightUp"   value="/InfoLinks.jsp" />
+        <put name="RightDown"   value="/RightDown.jsp" />
+        <put name="Content" value="/SubMenu.jsp"/>
+    </definition>
+            <definition name="Tiles.Member.SubMenu" page="/Layout.jsp" >
+        <put name="Title" value="OurLibrary/main" />
+        <put name="Header"  value="/Header.jsp" />
+        <put name="LeftMenu" value="/CategoryTable.jsp"/>
+        <put name="RightUp"   value="/InfoLinks.jsp" />
+        <put name="RightDown"   value="/RightDown.jsp" />
+        <put name="Content" value="/SubMenu.jsp"/>
+    </definition>
+        <definition name="Tiles.Member.SubMenu2" page="/Layout.jsp" >
+        <put name="Title" value="OurLibrary/main" />
+        <put name="Header"  value="/Header.jsp" />
+        <put name="LeftMenu" value="/CategoryTable.jsp"/>
+        <put name="RightUp"   value="/InfoLinks.jsp" />
+        <put name="RightDown"   value="/RightDown.jsp" />
+        <put name="Content" value="/SubMenu.jsp"/>
+    </definition>
+   <definition name="Tiles.Member.SubMenu3" page="/Layout.jsp" >
+        <put name="Title" value="OurLibrary/main" />
+        <put name="Header"  value="/Header.jsp" />
+        <put name="LeftMenu" value="/CategoryTable.jsp"/>
+        <put name="RightUp"   value="/InfoLinks.jsp" />
+        <put name="RightDown"   value="/MemberRightDown.jsp" />
+        <put name="Content" value="/SubMenu.jsp"/>
+    </definition>
+    
+<!--    etmame sub menu ha -->
+
+
+<!--upload success ha -->
+
+        <definition name="Tiles.Admin.UploadSuccess" page="/Layout.jsp" >
+        <put name="Title" value="YourLibrary/Main" />
+        <put name="Header"  value="/Header.jsp" />
+        <put name="LeftMenu" value="/Menu.jsp" />
+        <put name="RightUp"   value="/InfoLinks.jsp" />
+        <put name="RightDown"   value="/RightDown.jsp" />
+        <put name="Content" value="/AdminUploadSuccess.jsp"/>
+    </definition>
+            <definition name="Tiles.Member.UploadSuccess" page="/Layout.jsp" >
+        <put name="Title" value="YourLibrary/Main" />
+        <put name="Header"  value="/Header.jsp" />
+        <put name="LeftMenu" value="/Menu.jsp" />
+        <put name="RightUp"   value="/InfoLinks.jsp" />
+        <put name="RightDown"   value="/RightDown.jsp" />
+        <put name="Content" value="/MemberUploadSuccess.jsp"/>
+    </definition>
+            <definition name="Tiles.Guest.UploadSuccess" page="/Layout.jsp" >
+        <put name="Title" value="YourLibrary/Main" />
+        <put name="Header"  value="/Header.jsp" />
+        <put name="LeftMenu" value="/Menu.jsp" />
+        <put name="RightUp"   value="/InfoLinks.jsp" />
+        <put name="RightDown"   value="/LoginTable.jsp" />
+        <put name="Content" value="/GuestUploadSuccess.jsp"/>
+    </definition>
+    
+    
+<!--    etmame upload success ha-->
+    
+    
+    
+    <definition name="Tiles.Membering.Success" page="/Layout.jsp" >
+        <put name="Title" value="OurLibrary/main" />
+        <put name="Header"  value="/Header.jsp" />
+        <put name="LeftMenu" value="/Menu.jsp"/>
+        <put name="RightUp"   value="/InfoLinks.jsp" />
+        <put name="RightDown"   value="/LoginTable.jsp" />
+        <put name="Content" value="/MemberingSuccess.jsp"/>
+    </definition>
+    
+    <definition name="Tiles.Membering.Main" page="/Layout.jsp" >
+        <put name="Title" value="YourLibrary/Main" />
+        <put name="Header"  value="/Header.jsp" />
+        <put name="LeftMenu" value="/Menu.jsp" />
+        <put name="RightUp"   value="/InfoLinks.jsp" />
+        <put name="RightDown"   value="/MemberWelcomeDown.jsp" />
+        <put name="Content" value="/Content.jsp"/>
+    </definition>
+
+    
+    <definition name="Tiles.Member.Main.AfterLogin" page="/Layout.jsp" >
+        <put name="Title" value="YourLibrary/Main" />
+        <put name="Header"  value="/Header.jsp" />
+        <put name="LeftMenu" value="/Menu.jsp" />
+        <put name="RightUp"   value="/InfoLinks.jsp" />
+        <put name="RightDown"   value="/RightDown.jsp" />
+        <put name="Content" value="/Content.jsp"/>
+    </definition>
+    
+
+    
+    <definition name="Tiles.Admin.AddRemove" page="/Layout.jsp" >
+        <put name="Title" value="YourLibrary/Main" />
+        <put name="Header"  value="/Header.jsp" />
+        <put name="LeftMenu" value="/CategoryTable.jsp" />
+        <put name="RightUp"   value="/InfoLinks.jsp" />
+        <put name="RightDown"   value="/RightDown.jsp" />
+        <put name="Content" value="/AddRemove.jsp"/>
+    </definition>
+    
+    <definition name="Tiles.Admin.FileUpload" page="/Layout.jsp" >
+        <put name="Title" value="YourLibrary/Main" />
+        <put name="Header"  value="/Header.jsp" />
+        <put name="LeftMenu" value="/Menu.jsp" />
+        <put name="RightUp"   value="/InfoLinks.jsp" />
+        <put name="RightDown"   value="/RightDown.jsp" />
+        <put name="Content" value="/FileUpload.jsp"/>
+    </definition>
+
+    <definition name="Tiles.Admin.Main.AfterLogin" page="/Layout.jsp" >
+        <put name="Title" value="YourLibrary/Main" />
+        <put name="Header"  value="/Header.jsp" />
+        <put name="LeftMenu" value="/Menu.jsp" />
+        <put name="RightUp"   value="/InfoLinks.jsp" />
+        <put name="RightDown"   value="/RightDown.jsp" />
+        <put name="Content" value="/Content.jsp"/>
+    </definition>
+    
+    <definition name="Tiles.Admin.WaitingList" page="/Layout.jsp" >
+        <put name="Title" value="YourLibrary/Main" />
+        <put name="Header"  value="/Header.jsp" />
+        <put name="LeftMenu" value="/Menu.jsp" />
+        <put name="RightUp"   value="/InfoLinks.jsp" />
+        <put name="RightDown"   value="/RightDown.jsp" />
+        <put name="Content" value="/WaitingList.jsp"/>
+    </definition>
+
+    
+    <definition name="Tiles.Admin.WaitingListNull" page="/Layout.jsp" >
+        <put name="Title" value="YourLibrary/Main" />
+        <put name="Header"  value="/Header.jsp" />
+        <put name="LeftMenu" value="/Menu.jsp" />
+        <put name="RightUp"   value="/InfoLinks.jsp" />
+        <put name="RightDown"   value="/RightDown.jsp" />
+        <put name="Content" value="/WaitingListNull.jsp"/>
+    </definition>
+
+    <definition name="Tiles.Guest.Membering" page="/Layout.jsp" >
+        <put name="Title" value="OurLibrary/Membering" />
+        <put name="Header"  value="/Header.jsp" />
+        <put name="LeftMenu" value="/Menu.jsp" />
+        <put name="RightUp" value="/MemberingRightUp.jsp" />
+        <put name="RightDown"   value="/MemberingInfo.jsp" />
+        <put name="Content" value="/MemberingTable.jsp"/>
+    </definition>
+    <definition name="Tiles.Member.ChangePass" page="/Layout.jsp" >
+        <put name="Title" value="OurLibrary/main" />
+        <put name="Header"  value="/Header.jsp" />
+        <put name="LeftMenu" value="/Menu.jsp"/>
+        <put name="RightUp"   value="/InfoLinks.jsp" />
+        <put name="RightDown"   value="/InfoLinks.jsp" />
+        <put name="Content" value="/ChangePassTable.jsp"/>
+    </definition>
+        <definition name="Tiles.Member.ChangePassSuccess" page="/Layout.jsp" >
+        <put name="Title" value="OurLibrary/main" />
+        <put name="Header"  value="/Header.jsp" />
+        <put name="LeftMenu" value="/Menu.jsp"/>
+        <put name="RightUp"   value="/InfoLinks.jsp" />
+        <put name="RightDown"   value="/InfoLinks.jsp" />
+        <put name="Content" value="/MemberChangePassSuccess.jsp"/>
+    </definition>
+            <definition name="Tiles.Admin.ChangePassSuccess" page="/Layout.jsp" >
+        <put name="Title" value="OurLibrary/main" />
+        <put name="Header"  value="/Header.jsp" />
+        <put name="LeftMenu" value="/Menu.jsp"/>
+        <put name="RightUp"   value="/InfoLinks.jsp" />
+        <put name="RightDown"   value="/InfoLinks.jsp" />
+        <put name="Content" value="/AdminChangePassSuccess.jsp"/>
+    </definition>
+    
+<!-- sample tiles definitions
+    <definition name=".mainMenu" path="/common/layouts/vboxLayout.jsp" >
+        <putList name="list" >
+            <add value=".menu.links" />
+            <add value=".menu.taglib.references" />
+            <add value=".menu.printer.friendly" />
+            <add value=".menu.old.documents" />
+      </putList>
+    </definition>
+
+    <definition name="aPage" extends=".mainLayout">
+        <put name="title"  value="Another Title" />
+        <put name="body"   value=".aPage.body" />
+    </definition>
+
+    end samples -->
+
+    <definition name="${YOUR_DEFINITION_HERE}">
+    </definition>
+
+</tiles-definitions>

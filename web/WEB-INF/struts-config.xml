@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
+<struts-config>
+     <form-beans>
+        <form-bean name="LoginForm2"
+          type="org.apache.struts.validator.DynaValidatorForm"
+          >
+         <form-property name="username" type="java.lang.String"/>
+         <form-property name="password" type="java.lang.String"/>
+         
+        </form-bean>
+        <form-bean name="FileUpload" type="Forms.UploadForm"/>
+        <form-bean name="MemberingForm2"
+          type="org.apache.struts.validator.DynaValidatorForm">
+         <form-property name="username" type="java.lang.String"/>
+         <form-property name="password" type="java.lang.String"/>
+         <form-property name="password2" type="java.lang.String"/>
+         <form-property name="FirstName" type="java.lang.String"/>
+         <form-property name="LastName" type="java.lang.String"/>
+         <form-property name="Email" type="java.lang.String"/>
+        </form-bean>
+        
+        <form-bean name="AcceptRemoveFileForm" type="Forms.AcceptRemoveFileForm"/>
+        <form-bean name="SubMenuForm" type="Forms.SubMenuForm"/>
+        <form-bean name="MemberingForm" type="Forms.MemberingForm"/>
+        <form-bean name="AddRemoveForm" type="Forms.AddRemoveForm"/>
+        <form-bean name="LoginForm" type="Forms.LoginForm"/>
+        <form-bean name="ChangePassForm" type="Forms.ChangePassForm"/>
+        <form-bean name="WaitingListForm" type="Forms.WaitingListForm"/>   
+        <form-bean name="Menu1Form" type="Forms.Menu1Form"/>   
+    </form-beans>
+    
+    <global-exceptions>
+    
+    </global-exceptions>
+
+    <global-forwards>
+        <forward name="welcome"  path="/Welcome.do"/>
+    </global-forwards>
+
+    <action-mappings>
+        <action path="/Main" name="Menu1Form"
+            type="Actions.Menu1Action"
+            scope="request"
+            validate="true"
+            input="Tiles.Guest.Main"       
+            >
+                <forward name="Success" path="Tiles.Guest.Main"/>
+            </action>
+            
+        <action path="/LoginAction" name="LoginForm"
+            type="Actions.LoginAction"
+            scope="request"
+            validate="true"
+            input="Tiles.Guest.Main"       
+            >
+                <forward name="MemberLoginSuccess" path="Tiles.Member.Main.AfterLogin"/>
+                <forward name="AdminLoginSuccess" path="Tiles.Admin.Main.AfterLogin"/>
+            </action>
+            
+          <action path="/acceptRemoveFile" name="AcceptRemoveFileForm"
+            type="Actions.AcceptRemoveFileAction"
+            scope="request"
+            validate="true"
+            input="Tiles.Admin.AdminSubMenu"       
+            >
+                <forward name="Success" path="Tiles.Admin.AdminSubMenu"/>
+            </action>
+
+         <action path="/Membering" forward="Tiles.Guest.Membering"/>
+         <action path="/AddRemove" forward="Tiles.Admin.AddRemove"/>
+         <action path="/AddRemoveAction" name="AddRemoveForm"
+            type="Actions.AddRemoveAction"
+            scope="request"
+            validate="true"
+            input="Tiles.Admin.AddRemove"   
+            >
+                <forward name="menu1" path="Tiles.Admin.AddRemove"/>
+                <forward name="levelone" path="Tiles.Admin.SubMenu"/>
+                <forward name="leveltwo" path="Tiles.Admin.SubMenu"/>
+                <forward name="levelthree" path="Tiles.Admin.SubMenu"/>
+         </action> 
+         <action path="/WaitingList" name="WaitingListForm"
+            type="Actions.WaitingListAction"
+            scope="request"
+            validate="true"
+            input="Tiles.Admin.WaitingList"   
+            >
+                <forward name="WaitingListSuccess" path="Tiles.Admin.WaitingList"/>
+                <forward name="WaitingListNullSuccess" path="Tiles.Admin.WaitingList"/>
+         </action>        
+         <action path="/WaitingListAction" name="WaitingListForm"
+            type="Actions.WaitingListSubmitAction"
+            scope="request"
+            validate="true"
+            input="Tiles.Admin.WaitingList"   
+            >
+                <forward name="WaitingListSuccess" path="/WaitingList.do"/>
+            </action>
+         <action
+           path="/FileUpload"
+           type="Actions.UploadAction"
+           name="FileUpload"
+           scope="request"
+           validate="true"
+           input="Tiles.Admin.FileUpload">
+           <forward name="MemberSuccess" path="Tiles.Member.UploadSuccess"/> 
+           <forward name="AdminSuccess" path="Tiles.Admin.UploadSuccess"/>
+           <forward name="Success" path="Tiles.Guest.UploadSuccess"/>
+        </action>
+        <action path="/ChangePassAction" name="ChangePassForm"
+            type="Actions.ChangePassAction"
+            scope="request"
+            validate="true"
+            input="Tiles.Member.ChangePass"       
+            >
+                <forward name="MemberChangePassSuccess" path="Tiles.Member.ChangePassSuccess"/>
+                <forward name="AdminChangePassSuccess" path="Tiles.Admin.ChangePassSuccess"/>
+            </action>
+        <action path="/MemberingAction" name="MemberingForm"
+            type="Actions.MemberingAction"
+            scope="request"
+            validate="true"
+            input="Tiles.Guest.Membering"       
+            >
+                <forward name="MemberingSuccess" path="Tiles.Membering.Success"/>
+            </action>
+        <action path="/UploadFile" forward="Tiles.Admin.FileUpload"/>
+        
+               <!--action path="/WaitingListAction"
+            type="Actions.WaitingListSubmitAction"
+            scope="request"
+            validate="true"
+            input="Tiles.Admin.WaitingList"   
+            >
+                <forward name="WaitingListSuccess" path="Tiles.Admins.ChangeWaitingList"/>
+            </action-->
+        
+        <action path="/MainMember" forward="Tiles.Member.Main"/>
+        <action path="/MainAdmin" forward="Tiles.Admin.Main"/>
+        <action path="/ChangePass" forward="Tiles.Member.ChangePass"/> 
+           <action path="/AdminFirstMenu" forward="Tiles.Admin.FirstMenu"/>
+           <action path="/MemberFirstMenu" forward="Tiles.Member.FirstMenu"/>
+           <action path="/GuestFirstMenu" forward="Tiles.Guest.FirstMenu"/>      
+        
+<!--    submenu ha    -->
+ 
+      <action path="/AdminSubMenu" name="SubMenuForm"
+        type="Actions.SubMenuAction"
+        scope="request"
+        validate="true"
+        input="Tiles.Admin.SubMenu"       
+        >
+            <forward name="success" path="Tiles.Admin.SubMenu"/>
+        </action>
+
+    </action-mappings>
+    
+    <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+
+    <message-resources parameter="com/myapp/struts/ApplicationResource"/>    
+    
+    <!-- ========================= Tiles plugin ===============================-->
+    <!--
+    This plugin initialize Tiles definition factory. This later can takes some
+    parameters explained here after. The plugin first read parameters from
+    web.xml, thenoverload them with parameters defined here. All parameters
+    are optional.
+    The plugin should be declared in each struts-config file.
+    - definitions-config: (optional)
+    Specify configuration file names. There can be several comma
+    separated file names (default: ?? )
+    - moduleAware: (optional - struts1.1)
+    Specify if the Tiles definition factory is module aware. If true
+    (default), there will be one factory for each Struts module.
+    If false, there will be one common factory for all module. In this
+    later case, it is still needed to declare one plugin per module.
+    The factory will be initialized with parameters found in the first
+    initialized plugin (generally the one associated with the default
+    module).
+    true : One factory per module. (default)
+    false : one single shared factory for all modules
+    - definitions-parser-validate: (optional)
+    Specify if xml parser should validate the Tiles configuration file.
+    true : validate. DTD should be specified in file header (default)
+    false : no validation
+
+    Paths found in Tiles definitions are relative to the main context.
+    -->
+    <plug-in className="org.apache.struts.tiles.TilesPlugin" >
+        <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />      
+        <set-property property="moduleAware" value="true" />
+    </plug-in>
+    
+    <!-- ========================= Validator plugin ================================= -->
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property
+            property="pathnames"
+            value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+    </plug-in>
+  
+</struts-config>

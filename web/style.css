@@ -1,0 +1,272 @@
+/* Nature - an open source xhtml/css website layout by Studio-plume.org kty 
+(Jan 04, 2007)
+ */
+
+body {
+margin: 0 auto;
+padding: 0;
+font: 76% Verdana,Tahoma,Arial,sans-serif;
+background: #211d1e url(images/body_deg.gif) repeat-x
+}
+#AddRemove tr,td{    
+    background: #846837;
+    text-align: center;
+}
+#LoginTable{
+    width: 150px;
+}
+#LoginTable td,tr{
+    width: 50px;
+}
+#WaitingListTable{
+float: none;
+text-align: center;
+margin: 10px 10px 10px 10px;
+font-size: 0.9em;
+
+}
+#WaitingListTable td{
+    border: 1px solid #846837;
+    border-spacing: 0px;
+    background-color: #846837;
+}
+#FolderTable{
+border: solid #b6952a;
+background-color: #b6952a;
+color: black;
+}
+#FolderTable td,tr{
+    background: #b6952a;
+    border-style: groove;
+}
+#back {
+background: #000000;
+color: #ffffff;
+border:  none;
+margin: 0 auto;
+width: 790px;
+}
+
+#Header {
+clear: both;
+margin: 0px 0em 0px 0em;
+padding: 0;
+height: 75px;
+background-color: #000000;}
+
+#Header h3 {
+width: 350px;
+margin: 15px 15px 0px 0px;
+float: right;
+}
+
+#Header p {
+width: 500px;
+float: left;
+text-align: center;
+color: #a0a0a0;
+margin: 0px 0px 0px 0px;
+font-size: 0.8em;
+line-height: 1.2em;
+height: 35px;
+}
+
+
+
+#LeftMenu {
+clear: left;
+float: left;
+width: 150px;
+margin: 0px 0px 0px 0px;
+}
+#LeftMenu tr,td{
+background: #67522c;
+border:#67522c;
+border-style: none;
+border-left: 1px #846837 solid;
+height: 30px;
+font-size: 0.9em;
+}
+
+#LeftMenu ul {	
+list-style: none;
+width: 150px;
+margin: 0 0 5px 0;
+padding: 0;
+}	
+
+#LeftMenu li {
+margin-bottom: 0px;
+}
+
+#LeftMenu li a {
+font-weight: bold;
+height: 0px;
+text-decoration: none;
+color: #fffff1;
+display: block;
+padding: 6px 0 0 10px;
+background: #67522c;
+border-left: 1px #846837 solid;
+}
+	
+	
+#LeftMenu li a:hover {
+background: #67522c;
+color: #fffff1;
+border-left: 4px #47381e solid;
+}
+
+.announce {
+margin: 10px 0 10px 0;
+padding: 10px;
+width: 130px;
+color: #a8a8a8;
+background-color: #000000;
+line-height: 1.3em;
+}
+
+#RightMenu {
+float: right;
+width: 150px;
+margin: 0 10px 10px 0;
+padding: 0px;
+font-size: 0.9em;
+line-height: 1.5em;
+text-align: justify; 
+}
+#Error{
+    color: red;
+}
+
+#Content p {
+margin: 0 0 1.5em 0;
+color: #b6952a;
+}
+
+#Content {
+margin: 0 160px 20px 160px;
+padding: 0 10px 0 10px;
+line-height: 1.6em;
+text-align: justify;
+}
+
+#Content h2 {
+font-size: 1.5em;
+margin: 0 0 0.5em 0;
+
+}
+
+#Content img {
+padding: 0px;
+display:table-row;
+}
+
+#MemberingTable{
+padding-right: 100px;
+border: solid #b6952a;
+}
+#error{
+    font-size: 0.5em;
+    color: #fffff1; 
+}
+
+
+h3 {
+font-size: 1.3em;
+margin: 0 0 10px 0;
+}
+
+a {
+text-decoration: none;
+color: #b6952a;
+}
+
+a:hover {
+text-decoration: underline;
+color: #b6952a;
+}
+
+
+#Footer {
+clear: both;
+margin: 0 auto;
+padding: 0px 0em 0px 0em;
+width: 790px;
+text-align: center;
+color: #808080;
+font-size: 0.9em;
+height: 244px;
+background: #211d1e url(images/pom_bas.jpg) no-repeat right;
+border: none;}
+
+#Footer a {
+color: #808080;
+text-decoration: none;
+}
+
+#Footer a:hover {
+text-decoration: underline;
+}
+
+.left {
+margin: 0px 7px 0px 5px;
+float: left;
+}
+
+.right {
+margin: 0px 7px 0px 5px;
+float: right;
+}
+
+.textright {
+text-align: right;
+}
+
+.center {
+text-align: center;
+}
+
+.small {
+font-size: 0.8em;
+}
+
+.bold {
+font-weight: bold;
+}
+
+.hide {
+display: none;
+}
+.menu {
+text-align: center;  
+height: 25px;
+font: 100;
+color: #ffffff;
+background: #67522c;
+border: #67522c;
+}
+.ok{
+    text-align: center;  
+height: 25px;
+font: 100;
+color: #ffffff;
+background: #846837;
+border: #846837;
+width: 100%;
+border-style: groove;
+}
+.clickFolder {
+text-align: center;  
+height: 25px;
+font: 100;
+color: #ffffff;
+background: #b6952a;
+border:  #b6952a;
+}
+.mainMenu{
+    background: #67522c;
+    width: 100%;
+    border-right: 1px #846837 solid;
+    height: auto;
+}
